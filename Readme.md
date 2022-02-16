@@ -68,7 +68,9 @@ using (StreamReader r = new StreamReader(filepath))
 {
     string json = r.ReadToEnd();
     List<RevitInfo>? deserializeObject = JsonConvert.DeserializeObject<List<RevitInfo>>(json);
-    Console.WriteLine(deserializeObject.First().APIName);
+    string query = "Autodesk.Revit.DB.BuiltInFailures.InterferenceFailures.GeometryWarning";
+    string guid = deserializeObject.First(x => x.APIName.Contains(query)).Guid;
+    string revitVersion = "2022";
 }
 
 ```
