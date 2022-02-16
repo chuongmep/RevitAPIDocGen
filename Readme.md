@@ -10,10 +10,10 @@ Install some package:
 - pip install beautifulsoup4
 
 ### Step by step:
-- Extract file htm from file chm RevitAPI
+- Extract file htm from file chm RevitAPI or crawl data from website [<https://www.revitapidocs.com/>](https://www.revitapidocs.com/)
 - Install all package request
-- Run file JsonRevitAPI.ipynb
-- See file json output
+- Change path folder contain all file htm in file JsonRevitAPI.ipynb and run
+- See file `json` and `csv` output
 
 #### Demo Data
 
@@ -60,7 +60,6 @@ public class RevitInfo
         public string Type { get; set; }
     }
 ```
-Read 
 ``` cs
 using Newtonsoft.Json;
 string filepath = @"C:\Users\Chuong.Ho\3D Objects\RevitAPIGen\RevitAPI2022.json";
