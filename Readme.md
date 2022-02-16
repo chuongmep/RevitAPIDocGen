@@ -71,6 +71,8 @@ using (StreamReader r = new StreamReader(filepath))
     string query = "Autodesk.Revit.DB.BuiltInFailures.InterferenceFailures.GeometryWarning";
     string guid = deserializeObject.First(x => x.APIName.Contains(query)).Guid;
     string revitVersion = "2022";
+    string linkQuery = $"https://www.revitapidocs.com/{revitVersion}/{guid}.htm";
+    Console.WriteLine(linkQuery);
 }
 
 ```
