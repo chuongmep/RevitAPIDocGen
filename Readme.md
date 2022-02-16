@@ -37,6 +37,61 @@ Result link to go to : [https://www.revitapidocs.com/2022/efdf5191-47a5-2d99-db4
 
 ![](pic/json.png)
 
+### How to read to project 
+
+#### Use csharp
+
+``` cs
+public class RevitInfo
+    {
+        [JsonProperty("Title")]
+        public string Title { get; set; }
+        [JsonProperty("Keywords")]
+        public string Keywords { get; set; }
+        [JsonProperty("APIName")]
+        public string APIName { get; set; }
+        [JsonProperty("Description")]
+        public string Description { get; set; }
+        [JsonProperty("NameSpace")]
+        public string NameSpace { get; set; }
+        [JsonProperty("Guid")]
+        public string Guid { get; set; }
+        [JsonProperty("Type")]
+        public string Type { get; set; }
+    }
+```
+Read 
+``` cs
+using Newtonsoft.Json;
+string filepath = @"C:\Users\Chuong.Ho\3D Objects\RevitAPIGen\RevitAPI2022.json";
+using (StreamReader r = new StreamReader(filepath))
+{
+    string json = r.ReadToEnd();
+    List<RevitInfo>? deserializeObject = JsonConvert.DeserializeObject<List<RevitInfo>>(json);
+    Console.WriteLine(deserializeObject.First().APIName);
+}
+
+```
+
+#### Use Python
+
+Read csv 
+``` py
+import pandas as pd
+df = pd.read_csv("RevitAPI2022.csv")
+df.head(10)
+```
+
+Read Json
+``` py
+import json
+from pandas import DataFrame
+with open('RevitAPI2022.json') as f:
+    data = json.load(f)
+df = DataFrame(data)
+df.head(10)
+```
+
 ### Warning 
 
 Project can't get everything, some function or properties can't search or include in file `json` or export to `csv`.If you want improve for this, please create a pull request !
