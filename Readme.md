@@ -25,7 +25,7 @@ Install some package:
  {
         "Title":"DoorCost",
         "Keywords":"ParameterTypeId.DoorCost property",
-        "APIName":"P:Autodesk.Revit.DB.ParameterTypeId.DoorCost.DoorCost",
+        "APIName":"P:Autodesk.Revit.DB.ParameterTypeId.DoorCost",
         "Description":"\"Cost\"",
         "Namespace":"Autodesk.Revit.DB",
         "Guid":"efdf5191-47a5-2d99-db4f-b425edebbee6",
