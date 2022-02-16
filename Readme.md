@@ -6,8 +6,8 @@ let see this problem [Revitlookupwpf](https://github.com/weianweigan/RevitLookup
 
 ### How to use : 
 Install some package: 
-- Pandas
-- BeautifulSoup
+- pip install pandas
+- pip install beautifulsoup4
 
 ### Step by step:
 - Extract file htm from file chm RevitAPI
@@ -39,4 +39,4 @@ Result link to go to : [https://www.revitapidocs.com/2022/efdf5191-47a5-2d99-db4
 
 ### Warning 
 
-Project can't get everything, some function or properties can't search in file json or export to csv.If you want improve for this, please create a pull request !
+Project can't get everything, some function or properties can't search or include in file `json` or export to `csv`.If you want improve for this, please create a pull request !
